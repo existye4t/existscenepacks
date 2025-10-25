@@ -19,7 +19,7 @@ export default function ExistScenePacks() {
     downloadLink: ''
   });
 
-  const ADMIN_PASSWORD = 'admin123';
+  const ADMIN_PASSWORD = 'exist1881';
 
   useEffect(() => {
     const saved = localStorage.getItem('scenepacks_items');
@@ -78,6 +78,9 @@ export default function ExistScenePacks() {
   };
 
   const handleAddItem = () => {
+    console.log('Ekle butonuna basıldı');
+    console.log('Form data:', formData);
+    
     if (!formData.title || !formData.poster) {
       alert('Başlık ve poster zorunludur!');
       return;
@@ -88,9 +91,14 @@ export default function ExistScenePacks() {
       ...formData
     };
 
-    saveItems([...items, newItem]);
+    console.log('Yeni item:', newItem);
+    const updatedItems = [...items, newItem];
+    console.log('Güncel items:', updatedItems);
+    
+    saveItems(updatedItems);
     setShowAddModal(false);
     resetForm();
+    alert('İçerik başarıyla eklendi!');
   };
 
   const handleEditItem = () => {
@@ -167,7 +175,6 @@ export default function ExistScenePacks() {
               Giriş Yap
             </button>
           </div>
-          <p className="text-gray-500 text-sm text-center mt-4">Demo şifre: admin123</p>
         </div>
       </div>
     );
