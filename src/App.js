@@ -30,34 +30,15 @@ export default function ExistScenePacks() {
       const defaultItems = [
         {
           id: 1,
-          title: "Breaking Bad",
-          poster: "https://images.unsplash.com/photo-1574267432644-f9485d7a74c0?w=500",
+          title: "Dexter Resurrection",
+          poster: "https://resizing.flixster.com/Y4hsqPBGzSlx9x8p0GTrUVuGj6E=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p30176692_b_v13_ae.jpg",
           category: "series",
-          description: "Kimya öğretmeni Walter White'ın metamfetamin üreticisine dönüşme hikayesi",
-          year: "2008-2013",
-          imdb: "9.5",
-          downloadLink: "#"
+          description: "Dexter Morgan awakens from a coma and sets out for New York City, determined to find Harrison and make things right. But when Miami Metro's Angel Batista arrives with questions, Dexter realizes his past is catching up to him fast.",
+          year: "2025-",
+          imdb: "9.1",
+          downloadLink: "https://rentry.co/existresurrection"
         },
-        {
-          id: 2,
-          title: "The Dark Knight",
-          poster: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=500",
-          category: "movies",
-          description: "Batman, Joker ile karşı karşıya gelir",
-          year: "2008",
-          imdb: "9.0",
-          downloadLink: "#"
-        },
-        {
-          id: 3,
-          title: "The Last of Us",
-          poster: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=500",
-          category: "games",
-          description: "Post-apokaliptik dünyada hayatta kalma oyunu",
-          year: "2013",
-          imdb: "9.8",
-          downloadLink: "#"
-        }
+        
       ];
       setItems(defaultItems);
       localStorage.setItem('scenepacks_items', JSON.stringify(defaultItems));
